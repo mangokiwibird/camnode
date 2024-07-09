@@ -1,5 +1,5 @@
 export function pick_random<T>(items: T[]): T {
-    return items[Math.floor(Math.random()*items.length)]
+    return items[Math.floor(Math.random() * items.length)]
 }
 
 function optional_zero(x: number) {

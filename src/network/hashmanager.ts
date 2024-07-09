@@ -8,4 +8,3 @@ export function add_to_database(hash: string, action: string, status: string, ti
         console.log("successfully requested add_to_database")
     })
 }
-

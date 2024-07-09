@@ -4,7 +4,7 @@ import fs from "fs"
 export function create_test_file() {
     const uuid = uuidv4()
 
-    fs.appendFileSync(`${uuid}.txt`, uuid)
+    fs.appendFileSync(`dummy/${uuid}.txt`, uuid)
 
     return uuid
 }

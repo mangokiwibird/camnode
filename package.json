@@ -6,6 +6,7 @@
   "dependencies": {
     "@helia/unixfs": "^3.0.6",
     "@types/uuid": "^10.0.0",
+    "blockstore-fs": "^1.1.10",
     "helia": "^4.2.4",
     "mqtt": "^5.8.0",
     "uuid": "^10.0.0"

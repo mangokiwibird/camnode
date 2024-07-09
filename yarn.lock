@@ -902,6 +902,11 @@ asn1js@^3.0.5:
     pvutils "^1.1.3"
     tslib "^2.4.0"
 
+balanced-match@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
+  integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
+
 base64-js@1.5.1, base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
@@ -935,7 +940,7 @@ bl@^6.0.8:
     inherits "^2.0.4"
     readable-stream "^4.2.0"
 
-blockstore-core@^4.4.0, blockstore-core@^4.4.1:
+blockstore-core@^4.0.0, blockstore-core@^4.4.0, blockstore-core@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/blockstore-core/-/blockstore-core-4.4.1.tgz#0804c8a00f096c43e1b679b1711a66157a421c5e"
   integrity sha512-peXfL9ZLx1cb84QALocMjhT8CsQ4JsreI/AitlN1inipSdC/G+jcYVJCqeCD5ecSTv/0LMpg8NlAPH/eBYZLjA==
@@ -949,6 +954,27 @@ blockstore-core@^4.4.0, blockstore-core@^4.4.1:
     it-merge "^3.0.3"
     it-pushable "^3.2.3"
     multiformats "^13.0.1"
+
+blockstore-fs@^1.1.10:
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/blockstore-fs/-/blockstore-fs-1.1.10.tgz#0dc8119b0bc293e6df4e056356e33e85528c7a05"
+  integrity sha512-Dg0mbdma0OY4NEk78efcAAiG5ZrMcIVrM7s+0e2p4uavnvrcBT6vDj5ITfnRfid3idKHOoCYShGEi9ENNgJg1A==
+  dependencies:
+    blockstore-core "^4.0.0"
+    fast-write-atomic "^0.2.1"
+    interface-blockstore "^5.0.0"
+    interface-store "^5.0.0"
+    it-glob "^2.0.6"
+    it-map "^3.0.5"
+    it-parallel-batch "^3.0.4"
+    multiformats "^13.0.1"
+
+brace-expansion@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.1.tgz#1edc459e0f0c548486ecf9fc99f2221364b9a0ae"
+  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  dependencies:
+    balanced-match "^1.0.0"
 
 braces@^3.0.3:
   version "3.0.3"
@@ -1177,6 +1203,11 @@ fast-unique-numbers@^8.0.13:
   dependencies:
     "@babel/runtime" "^7.23.8"
     tslib "^2.6.2"
+
+fast-write-atomic@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/fast-write-atomic/-/fast-write-atomic-0.2.1.tgz#7ee8ef0ce3c1f531043c09ae8e5143361ab17ede"
+  integrity sha512-WvJe06IfNYlr+6cO3uQkdKdy3Cb1LlCJSF8zRs2eT8yuhdbSlR9nIt+TgQ92RUxiRrQm+/S7RARnMfCs5iuAjw==
 
 fastq@^1.6.0:
   version "1.17.1"
@@ -1501,6 +1532,13 @@ it-foreach@^2.0.6:
   dependencies:
     it-peekable "^3.0.0"
 
+it-glob@^2.0.6:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/it-glob/-/it-glob-2.0.7.tgz#9c65a14dd89d3c19c0eaec50d382ee2b2396caba"
+  integrity sha512-FjL2rAsGu566sMVKexFG5ciDoKoi1lgwXlSE6DW0yVbGRyvrlzi0OQ3fbfrw89dpIAzJFHnLNQwZS4yRkt3d/Q==
+  dependencies:
+    minimatch "^9.0.4"
+
 it-glob@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/it-glob/-/it-glob-3.0.1.tgz#b30723a365e5564273ded2d030d61e15578ba5e2"
@@ -1730,6 +1768,13 @@ mimic-response@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz#2d1d59af9c1b129815accc2c46a022a5ce1fa3c9"
   integrity sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==
+
+minimatch@^9.0.4:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.5.tgz#d74f9dd6b57d83d8e98cfb82133b03978bc929e5"
+  integrity sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==
+  dependencies:
+    brace-expansion "^2.0.1"
 
 minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5, minimist@^1.2.8:
   version "1.2.8"
