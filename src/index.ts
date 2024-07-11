@@ -22,22 +22,3 @@ watcher.on('add', async (path) => {
         fs.rmSync(path)
     }, 5000)
 })
-
-
-
-// async function main() {
-//     for (let i = 0; i < 10; i++) {
-//         const uuid = create_test_file()
-//         const cid = upload_file(uuid)
-        
-//         const random_action = pick_random(["bathroom", "dining_room", "kitchen", "living_room"])
-//         const random_status = pick_random(["lying", "sitting", "standing", "running"])
-//         const timestamp = create_timestamp()
-        
-//         add_to_database(cid.toString(), random_action, random_status, timestamp)
-        
-//         console.log(cid)
-//     }
-// }
-
-// main()
