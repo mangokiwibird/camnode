@@ -1,24 +1,32 @@
 import { FsBlockstore } from "blockstore-fs"
+import { FsDatastore } from "datastore-fs"
 import fs from "fs"
+import { CID } from "multiformats/cid"
 
-const createNode = async () => {
+async function createNode() {
     const { createHelia } = await import("helia")
-    const { unixfs } = await import("@helia/unixfs")
 
     const blockstore = new FsBlockstore("./ipfs-storage/")
+    const datastore = new FsDatastore("./ipfs-datastore")
 
     const helia = await createHelia({
-        blockstore
+        blockstore,
+        datastore
     })
-
-    const helia_fs = unixfs(helia)
-
-    return helia_fs
+    
+    return helia
 }
 
-export async function upload_file(uuid: string) {
-    const helia_fs = await createNode()
+export async function upload_file(path: string): Promise<CID> {
+    const { unixfs } = await import("@helia/unixfs")
+    
+    const helia = await createNode()
+    const helia_fs = unixfs(helia)
 
-    const buffer = fs.readFileSync(`dummy/${uuid}.txt`)
-    return await helia_fs.addBytes(buffer)
+    const buffer = fs.readFileSync(path)
+    const cid = await helia_fs.addBytes(buffer)
+
+    helia.stop()
+
+    return cid
 }

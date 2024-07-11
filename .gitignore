@@ -1,3 +1,7 @@
 node_modules/
 dummy/
 ipfs-storage/
+movenet-image/
+ipfs-datastore/
+img_labeling.py
+movenet_thunder.tflite
